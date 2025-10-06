@@ -1,0 +1,35 @@
+.box {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #97beb9;
+    border: 1px solid #000000;
+  } 
+
+#board {
+    border: 1px solid #000000;
+    width: auto;
+  }
+
+#x-container {
+    margin-left: 10%;
+}
+
+#o-container {
+    margin-right: 10%;
+}
+
+#x-container, #o-container {
+    background-color: #96c6f5;
+    border: 1px solid #000000;
+    display: flex;
+    height: auto;
+    width: auto;
+  }
+
+.x-img{
+  height: 100px;
+  width: 100px;
+}
