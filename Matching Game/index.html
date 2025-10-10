@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matching Game</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/cardGameStyles.css" />
+  </head>
+
+  <body>
+    <nav class="nav-class">
+      <div>Match the emojis to the description!</div>
+    </nav>
+
+    <div class="d-flex flex-column align-items-center justify-content-start py-2">
+      <header class="mb-3 text-center w-100">
+        <!-- Game title and instructions -->
+        <h1 class="game-title">Matching Game</h1>
+        <p class="small-title">Drag the items on the left to the matching boxes on the right.</p>
+        <div id="scoreboard"></div>
+        <h4>Score: <span id="score-count">0</span></h4>
+      </header>
+
+      <main class="container">
+        <div class="row gx-4">
+          <section class="col-12 col-md-6">
+            <div class="box1">
+              <h2 class="box1"><b>Items</b></h2>
+              <div id="items" class="items-list">
+                <!-- Draggable items-->
+                <div id="item-ball" class="drag-labels">
+                  <div id="draggable-ball" class="draggable">⚽</div>
+                </div>
+                <div id="item-dog" class="drag-labels">
+                  <div id="draggable-dog" class="draggable">🐶</div>
+                </div>
+                <div id="item-music" class="drag-labels">
+                  <div id="draggable-music" class="draggable">🎵</div>
+                </div>
+                <div id="item-apple" class="drag-labels">
+                  <div id="draggable-apple" class="draggable">🍎</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="col-12 col-md-6">
+            <div class="box2">
+              <h2 class="box2"><b>Match Targets</b></h2>
+              <div id="targets" class="targets-grid">
+                <!-- Droppable targets -->
+                <div id="target-apple" class="target-labels">Fruit</div>
+                <div id="target-dog" class="target-labels">Animal</div>
+                <div id="target-ball" class="target-labels">Sport</div>
+                <div id="target-music" class="target-labels">Sound</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- Box for game completion -->
+      <div id="message" class="game-message" aria-live="polite" role="status"></div>
+    </div>
+
+    <footer class="footer">
+      <ul class="footer-links">
+        <li class="footer-item">
+
+          <a
+            class="footer-link"
+            href="https://github.com/Alex-Copeland-5/alex-copeland-5"
+            target="_blank"
+          >
+            Dev Profile</a
+          >
+        </li>
+
+        <li class="footer-item">
+          <a
+            class="footer-link"
+            href="https://github.com/Alex-Copeland-5/project-bravo"
+            target="_blank"
+          >
+            Game Repo</a
+          >
+        </li>
+
+        <li class="footer-item">
+          <a class="footer-link" href="https://github.com/Alex-Copeland-5/alex-copeland-5" target="_blank"
+            >GitHub Profile</a
+          >
+        </li>
+        <li class="footer-item">
+          <a
+            class="footer-link"
+            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Falex-copeland-5.github.io%2Falex-copeland-5%2F"
+            target="_blank"
+          >
+            Check Page Validity</a
+          >
+        </li>
+
+        <li class="footer-item">
+          <a class="footer-link" href="https://github.com/Alex-Copeland-5/alex-copeland-5" target="_blank"
+            >Source Code</a
+          >
+        </li>
+
+        <li class="footer-item">
+          <a
+            class="footer-link"
+            href="https://wave.webaim.org/report#/https://alex-copeland-5.github.io/alex-copeland-5/"
+            target="_blank"
+            >WAVE Report</a
+          >
+        </li>
+
+        <li class="footer-item">
+          <a class="footer-link" href="https://alex-copeland-5.github.io/alex-copeland-5/" target="_blank"></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="scripts/cardGameScripts.js"></script>
+</html>
